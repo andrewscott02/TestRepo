@@ -2,7 +2,6 @@
 
 body.EnfablerPage
 {
-    /* Not implemented properly */
     background-color: rgb(48, 27, 4);
     font-family: "Merienda", cursive;
     font-optical-sizing: auto;
@@ -152,6 +151,7 @@ a
     font-size: large;
 }
 
+/* Select multiple different sections by separating them with commas */
 #Details section, #Details article
 {
     display: inline-block;

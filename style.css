@@ -97,13 +97,14 @@ nav
     padding-right: 10px;
     color: rgb(255, 255, 255);
     margin: 0 auto;
+    text-decoration: none;
     
     padding: 20px;
     font-weight: bold;
     text-align: center;
 }
 
-.current
+.button:hover
 {
     background-color: rgb(61, 60, 172);
 }
@@ -111,7 +112,19 @@ nav
 .button a
 {
     color: rgb(255, 255, 255);
+    text-decoration: none;
     text-align: center;
+}
+
+.button a:visited
+{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.current
+{
+    background-color: rgb(61, 60, 172);
 }
 
 a
@@ -141,4 +154,9 @@ a
 {
     display: block;
     text-align: right;
+}
+
+ul li
+{
+    list-style: none;
 }

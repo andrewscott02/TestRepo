@@ -9,6 +9,16 @@ body.EnfablerPage
     font-style: normal;
 }
 
+body.EnfablerPage header
+{
+    color:white;
+}
+
+body.EnfablerPage footer
+{
+    color:white;
+}
+
 body
 {
     background-color: rgb(62, 122, 110);
@@ -53,7 +63,6 @@ footer
 main
 {
     background-color: rgb(255, 255, 255);
-    background-color: rgb(160, 152, 136);
     border: rgb(0, 0, 0) solid 2px;
     border-radius: 15px;
     padding: 20px;

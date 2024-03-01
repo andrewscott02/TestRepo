@@ -2,6 +2,15 @@
 
 *
 {
+    font-family: 'Courier New', Courier, monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+body.EnfablerPage
+{
+    /* Not implemented properly */
+    background-color: rgb(48, 27, 4);
     font-family: "Merienda", cursive;
     font-optical-sizing: auto;
     font-style: normal;
@@ -12,7 +21,7 @@ body
     background-color: rgb(62, 122, 110);
 }
 
-.PCG
+.InProgress
 {
     color: rgb(8, 25, 75)
 }
@@ -23,8 +32,15 @@ body
     border: rgb(0, 0, 0) solid 2px;
     border-radius: 20px;
     text-align: left;
-    padding: 20px;
+    padding: 40px;
     line-height: 1.5;
+
+    padding-top: 0px;
+}
+
+.devlogs h3
+{
+    text-align: center;
 }
 
 header, main, footer
@@ -40,11 +56,16 @@ footer
 
 main
 {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border: rgb(0, 0, 0) solid 2px;
     border-radius: 15px;
     padding: 20px;
     text-align: center;
+}
+
+#Enfabler-Main
+{
+    background-color: rgb(160, 152, 136);
 }
 
 nav
@@ -86,11 +107,23 @@ a
 
 #Details
 {
-    display: inline;
-    line-height: 0.5;
+    line-height: 1;
+}
+
+#Details div
+{
+    display: inline-block;
+    max-width: 50%;
 }
 
 #Screenshots img
 {
-    height: 100px;
+    display: inline-block;
+    max-width: 400px;
+}
+
+#back-to-top
+{
+    display: block;
+    text-align: right;
 }

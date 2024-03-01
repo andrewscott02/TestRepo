@@ -27,7 +27,7 @@ body
     font-style: normal;
 }
 
-.InProgress
+.InProgress a
 {
     color: rgb(8, 25, 75)
 }
@@ -76,7 +76,7 @@ main
     text-align: center;
 }
 
-#EnfablerMain
+main.EnfablerMain
 {
     background-color: rgb(160, 152, 136);
 }

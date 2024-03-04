@@ -300,7 +300,6 @@ ul li
 
 @media screen and (min-width: 550px), (orientation:landscape)
 {
-
     #Details section, #Details article
     {
         width:48%;
@@ -314,13 +313,14 @@ ul li
 
 
 
-@media screen and (min-width: 783px), (orientation:landscape)
+@media screen and (min-width: 600px), (orientation:landscape)
 {
     .navbar
     {
-        width: 110%;
-        margin: auto -0.5vw;
+        display: flex;
+        justify-content: space-around;
         position: sticky;
+        text-align: center;
     }
 
     .navbar li
@@ -333,11 +333,11 @@ ul li
         font-style: normal;
     }
 
-    .navbar ul
+    /* .navbar ul
     {
         width: 70%;
         margin: 0 auto;
-    }
+    } */
 }
 
 .debug

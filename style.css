@@ -7,6 +7,19 @@
     font-style: normal;
 }
 
+.navbar
+{
+    position: sticky;
+    top:0;
+    width: 100%;
+    background-color: rgb(62, 122, 110);
+}
+
+.enfablerNavbar
+{
+    background-color: rgb(48, 27, 4);
+}
+
 .navbar li
 {
     display: inline-block;
@@ -96,6 +109,7 @@ main
     border: rgb(0, 0, 0) solid 2px;
     border-radius: 15px;
     padding: 20px;
+    margin-top: 120px;
     text-align: center;
 }
 
@@ -195,4 +209,16 @@ a
 ul li
 {
     list-style: none;
+}
+
+@media print
+{
+    .navbar
+    {
+        display:none;
+    }
+    .button
+    {
+        display:none;
+    }
 }

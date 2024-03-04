@@ -261,6 +261,13 @@ a
     vertical-align: middle;
 }
 
+#Screenshots .flexContainer
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 #Screenshots img
 {
     width: 450%;
@@ -303,21 +310,6 @@ ul li
     }
 }
 
-@media screen and (min-width: 1047px), (orientation:landscape)
-{
-    #Details section, #Details article
-    {
-        width:48%;
-    }
-    #Screenshots img
-    {
-        display: inline-block;
-        max-width: 400px;
-    }
-}
-
-
-
 @media screen and (min-width: 600px), (orientation:landscape)
 {
     .navbar
@@ -343,6 +335,19 @@ ul li
         width: 70%;
         margin: 0 auto;
     } */
+}
+
+@media screen and (min-width: 1047px), (orientation:landscape)
+{
+    #Details section, #Details article
+    {
+        width:48%;
+    }
+    
+    #Screenshots img
+    {
+        max-width: 400px;
+    }
 }
 
 .debug

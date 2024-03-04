@@ -110,6 +110,11 @@ body.EnfablerPage .devlogs
     text-align: center;
 }
 
+.devlogs
+{
+    font-weight: bolder;
+}
+
 .devlogs footer
 {
     text-align: right;
@@ -298,7 +303,7 @@ ul li
     }
 }
 
-@media screen and (min-width: 550px), (orientation:landscape)
+@media screen and (min-width: 1047px), (orientation:landscape)
 {
     #Details section, #Details article
     {

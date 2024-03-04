@@ -34,6 +34,7 @@ body.EnfablerPage
     background-image: url(https://img.freepik.com/premium-vector/vintage-wooden-background-cartoon-brown-wood-table-great-design-any-purposes_450469-201.jpg);
     background-repeat: repeat;
     background-size: 100%;
+    background-attachment: fixed;
 
     font-family: "Merienda", cursive;
     font-optical-sizing: auto;
@@ -154,7 +155,7 @@ nav
     border-radius: 20px/10px;
 
     /* background-color: rgba(52, 51, 104, 0.75); */
-    background-image: linear-gradient(130deg, rgba(79, 78, 134, 0.75) 0%, rgb(255, 255, 255) 20%, rgba(79, 78, 134, 0.75) 30%, rgba(52, 51, 104, 0.75));
+    background-image: linear-gradient(130deg, rgba(79, 78, 134, 0.75) 0%, rgb(255, 255, 255) 25%, rgba(79, 78, 134, 0.75) 50%, rgba(52, 51, 104, 0.75));
 
     /* Darker border at bottom and lighter border at top to appear 3D */
     border-color: rgb(147, 129, 211) rgb(78, 77, 139) rgb(22, 21, 63);
@@ -164,6 +165,7 @@ nav
 
 .button:hover
 {
+    background-image: linear-gradient(-45deg, rgba(79, 78, 134, 0.75) 0%, rgb(255, 255, 255) 25%, rgba(79, 78, 134, 0.75) 50%, rgba(52, 51, 104, 0.75));
     background-color: rgb(61, 60, 172);
     border-color: rgb(48, 48, 100);
     box-shadow: inset 0 0 20px 10px rgba(0, 10, 30, 0.8);
@@ -186,8 +188,10 @@ nav
 /*When tabbed to*/
 .button:focus
 {
+    background-image: linear-gradient(-45deg, rgba(79, 78, 134, 0.75) 0%, rgb(255, 255, 255) 25%, rgba(79, 78, 134, 0.75) 50%, rgba(52, 51, 104, 0.75));
     background-color: rgb(61, 60, 172);
     border-color: rgb(48, 48, 100);
+    box-shadow: inset 0 0 20px 10px rgba(0, 10, 30, 0.8);
 }
 
 .button a
@@ -208,6 +212,7 @@ nav
 
 .current
 {
+    background-image: linear-gradient(-45deg, rgba(79, 78, 134, 0.75) 0%, rgb(255, 255, 255) 25%, rgba(79, 78, 134, 0.75) 50%, rgba(52, 51, 104, 0.75));
     background-color: rgba(97, 96, 184, 0.75);
     box-shadow: inset 0 0 20px 10px rgba(4, 20, 53, 0.8);
 }
@@ -233,8 +238,8 @@ a
 
 #Screenshots img
 {
+    width: 450%;
     max-width: 300px;
-    margin:0px;
     border:0px;
     padding:0px;
 }
@@ -273,7 +278,7 @@ ul li
     }
 }
 
-@media screen and (min-width: 700px), (orientation:landscape)
+@media screen and (min-width: 550px), (orientation:landscape)
 {
     .navbar li
     {
@@ -296,7 +301,11 @@ ul li
     {
         background-color: rgb(48, 27, 4);
     }
-    
+
+    #Details section, #Details article
+    {
+        width:48%;
+    }
     #Screenshots img
     {
         display: inline-block;

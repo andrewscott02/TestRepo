@@ -1,5 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Yellowtail&display=swap');
 
+#top
+{
+    font-family: 'Courier New', Courier, monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.navbar li
+{
+    display: inline-block;
+    width: 120px;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
 body.EnfablerPage
 {
     background-color: rgb(48, 27, 4);
@@ -21,6 +38,7 @@ body.EnfablerPage main
 body.EnfablerPage footer
 {
     color:white;
+    display:none;
 }
 
 body

@@ -18,10 +18,15 @@
     background-color: rgb(48, 27, 4);
 }
 
+ul
+{
+    padding-inline-start: 0px
+}
+
 .navbar li
 {
     display: block;
-    width: 90%;
+    width: 100%;
 
     font-family: 'Courier New', Courier, monospace;
     font-optical-sizing: auto;
@@ -196,8 +201,7 @@ a
 
 #Screenshots img
 {
-    display: inline-block;
-    max-width: 400px;
+    max-width: 300px;
     margin:0px;
     border:0px;
     padding:0px;
@@ -231,7 +235,7 @@ ul li
     }
 }
 
-@media screen and (min-width: 700px)
+@media screen and (min-width: 700px), (orientation:landscape)
 {
     .navbar li
     {
@@ -246,5 +250,10 @@ ul li
     {
         position: sticky;
         top:0;
+    }
+    #Screenshots img
+    {
+        display: inline-block;
+        max-width: 400px;
     }
 }

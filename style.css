@@ -9,8 +9,6 @@
 
 .navbar
 {
-    position: sticky;
-    top:0;
     width: 100%;
     background-color: rgb(62, 122, 110);
 }
@@ -22,8 +20,8 @@
 
 .navbar li
 {
-    display: inline-block;
-    width: 120px;
+    display: block;
+    width: 90%;
 
     font-family: 'Courier New', Courier, monospace;
     font-optical-sizing: auto;
@@ -89,6 +87,11 @@ body
     text-align: right;
     padding-top: 0px;
     padding-bottom: 20px;
+}
+
+header
+{
+    text-align: center;
 }
 
 header, main, footer
@@ -220,5 +223,28 @@ ul li
     .button
     {
         display:none;
+    }
+
+    #back-to-top
+    {
+        display:none;
+    }
+}
+
+@media screen and (min-width: 700px)
+{
+    .navbar li
+    {
+        display: inline-block;
+        width: 120px;
+
+        font-family: 'Courier New', Courier, monospace;
+        font-optical-sizing: auto;
+        font-style: normal;
+    }
+    .navbar
+    {
+        position: sticky;
+        top:0;
     }
 }

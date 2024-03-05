@@ -28,7 +28,8 @@ nav
     top:0vh;
 }
 
-.navbar .item
+/* Combinator: Use > to target direct children */
+.navbar > .item
 {
     max-width: 100%;
     flex-grow: 1;
@@ -46,9 +47,17 @@ nav
     /* margin: 0 15em 0; */
 }
 
-#socialnavbuttonstart
+/* #socialnavbuttonstart
 {
     margin-right: auto;
+} */
+
+/* Combinator: Use + to get immediate siblings of type
+                Use ~ to select all siblings of type */
+#socialnavbuttonstart + div
+{
+    margin-left: auto;
+    background-color: black;
 }
 
 .navbar .rightAligned
@@ -157,6 +166,29 @@ body.EnfablerPage .devlogs
     padding-top: 0px;
     padding-bottom: 20px;
     background-color:rgba(255, 255, 255, 0);
+}
+
+/* Gets the last item in the devlogs list and then gets the anchor tag within
+    Then it adds a red new text before */
+ol[class="devlogs"] > li:last-child > a::before
+{
+    content: "*NEW* ";
+    color: red;
+}
+
+input[type="checkbox"]
+{
+    margin-bottom: 2rem;
+}
+
+input[type="checkbox"]:checked ~ li
+{
+    display: none;
+}
+
+input[type="checkbox"]:checked ~ li:last-child
+{
+    display: list-item;
 }
 
 /* ========================================================== */
@@ -385,7 +417,7 @@ a
 }
 
 /* ========================================================== */
-/* Back to Top Elements */
+/* Button Decoration Elements */
 /* ========================================================== */
 
 #back-to-top
@@ -398,6 +430,16 @@ a
 #back-to-top::before, #back-to-top::after
 {
     content: "\2191";
+}
+
+a[target="_blank"]::after
+{
+    content: "\21D7";
+}
+
+.mail::before
+{
+    content: "\2709";
 }
 
 /* ========================================================== */
@@ -492,3 +534,27 @@ ul li
 {
     border: 5px solid red;
 }
+
+/* ========================================================== */
+/* Notes */
+/* ========================================================== */
+
+/* a[href^="http:"]
+{
+    Selects all links that start with http:
+}
+*/
+
+/*
+a[href$=".com"]
+{
+    Selects all links that end with with .com
+}
+*/
+
+/*
+a[href*="games"]
+{
+    Selects all links that contain the word games
+}
+*/

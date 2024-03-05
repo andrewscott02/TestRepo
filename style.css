@@ -25,11 +25,11 @@ nav
 {
     width: 100%;
     background-color: rgb(49, 49, 49);
+    
     top:0vh;
 }
 
-/* Combinator: Use > to target direct children */
-.navbar > .item
+.navbar .item
 {
     max-width: 100%;
     flex-grow: 1;
@@ -47,18 +47,19 @@ nav
     /* margin: 0 15em 0; */
 }
 
-/* #socialnavbuttonstart
+#socialnavbuttonstart
 {
     margin-right: auto;
-} */
+}
 
 /* Combinator: Use + to get immediate siblings of type
-                Use ~ to select all siblings of type */
+                Use ~ to select all siblings of type
 #socialnavbuttonstart + div
 {
     margin-left: auto;
     background-color: black;
 }
+*/
 
 .navbar .rightAligned
 {
@@ -111,7 +112,6 @@ body.EnfablerPage .devlogs
     border: rgb(0, 0, 0) solid 2px;
     border-radius: 15px 15px 40px 15px;
     text-align: left;
-    padding: 40px;
     line-height: 1;
 
     padding-top: 0px;
@@ -152,12 +152,14 @@ body.EnfablerPage .devlogs
 
 .devlogs h3
 {
+    background-color: rgba(139, 139, 139, 0.432);
     text-align: center;
 }
 
 .devlogs
 {
     font-weight: bolder;
+    padding: 40px;
 }
 
 .devlogs footer
@@ -168,25 +170,38 @@ body.EnfablerPage .devlogs
     background-color:rgba(255, 255, 255, 0);
 }
 
+/* Combinator: Use > to target direct children */
+.devlogs > li
+{
+    width: 100%;
+}
+
+ol[class="devlogs"] > li:nth-of-type(odd)
+{
+    background-color: rgba(139, 139, 139, 0.432);
+}
+
 /* Gets the last item in the devlogs list and then gets the anchor tag within
     Then it adds a red new text before */
-ol[class="devlogs"] > li:last-child > a::before
+ol[class="devlogs"] > li:nth-last-of-type(1) > a::before
 {
     content: "*NEW* ";
     color: red;
 }
+
+/* Checkbox styling to hide older devlogs */
 
 input[type="checkbox"]
 {
     margin-bottom: 2rem;
 }
 
-input[type="checkbox"]:checked ~ li
+input[type="checkbox"]:not(:checked) ~ li
 {
     display: none;
 }
 
-input[type="checkbox"]:checked ~ li:last-child
+input[type="checkbox"]:not(:checked) ~ li:nth-last-of-type(1)
 {
     display: list-item;
 }
@@ -390,8 +405,17 @@ a
 
 #Details section
 {
-    margin: auto;
+    margin-bottom: auto;
     flex: 1;
+}
+
+#Details section p::first-letter
+{
+    float:left;
+    font-size: 3em;
+    color: rgb(0, 0, 0);
+    margin-right: -0.5rem;
+    line-height: 0.5;
 }
 
 #Details article
@@ -427,16 +451,20 @@ a
     text-align: center;
 }
 
+/* Adds arrows pointing up */
 #back-to-top::before, #back-to-top::after
 {
     content: "\2191";
 }
 
+/* Adds arrows for external links that open a tab */
 a[target="_blank"]::after
 {
     content: "\21D7";
+    margin-left: 10px;
 }
 
+/* Adds an envelope before the mail link */
 .mail::before
 {
     content: "\2709";
@@ -450,6 +478,10 @@ ul li
 {
     list-style: none;
 }
+
+/* ========================================================== */
+/* Media Queries */
+/* ========================================================== */
 
 @media print
 {
@@ -556,5 +588,37 @@ a[href$=".com"]
 a[href*="games"]
 {
     Selects all links that contain the word games
+}
+*/
+
+
+/*
+li:nth-child(2n + 3)
+{
+    Selects all list items with gaps of 2, starting at 3
+}
+li:nth-child(-n + 3)
+{
+    Selects 3 and all list items before it
+}
+li:nth-of-type(2n + 3)
+{
+    Selects all list items with gaps of 2, starting at 3
+    nth of type ignores other element types that are between them
+}
+*/
+
+/* 
+:root
+{
+    Selects the root of the page (usually the html element)
+}
+:target
+{
+    Selects the targetted element
+}
+div:not(#heading)
+{
+    Selects all divs that do not have the heading id
 }
 */

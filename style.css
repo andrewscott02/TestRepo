@@ -274,9 +274,21 @@ a
     font-size: large;
 }
 
+#Details .flexContainer
+{
+    flex-direction: column;
+    align-items: center;
+}
+
 #Details section
 {
     margin: auto;
+    flex: 1;
+}
+
+#Details article
+{
+    flex: 1.1;
 }
 
 #Screenshots .flexContainer
@@ -357,14 +369,33 @@ ul li
 
 @media screen and (min-width: 1047px), (orientation:landscape)
 {
-    #Details section, #Details article
+    #Details article
     {
-        max-width:48%;
+        flex: 1.3;
+    }
+
+    #Details .flexContainer
+    {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #Details .flexContainer
+    {
+        flex-wrap: nowrap;
     }
     
     #Screenshots img
     {
         max-width: 400px;
+    }
+}
+
+@media screen and (min-width: 1275px), (orientation:landscape)
+{
+    #Details article
+    {
+        flex: 1.6;
     }
 }
 

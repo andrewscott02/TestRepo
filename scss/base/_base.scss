@@ -74,35 +74,32 @@ body.EnfablerPage
     background-repeat: repeat;
     background-size: 100%;
     background-attachment: fixed;
-}
 
-body.EnfablerPage main
-{
-    background: url(https://media.istockphoto.com/id/182154211/photo/old-paper-textere.webp?b=1&s=170667a&w=0&k=20&c=ym_eO6PKLl6itLgksTBO-ykUVtQwYabUfWXYyuL2iCU=) center/cover papayawhip;
-    background-size: 100%;
+    main
+    {
+        background: url(https://media.istockphoto.com/id/182154211/photo/old-paper-textere.webp?b=1&s=170667a&w=0&k=20&c=ym_eO6PKLl6itLgksTBO-ykUVtQwYabUfWXYyuL2iCU=) center/cover papayawhip;
+        background-size: 100%;
 
-    box-shadow: inset 0 0 20px 10px rgba(30, 11, 0, 0.8);
+        box-shadow: inset 0 0 20px 10px rgba(30, 11, 0, 0.8);
 
-    font-family: "Merienda", cursive;
-    font-optical-sizing: auto;
-    font-style: normal;
-}
+        font-family: "Merienda", cursive;
+        font-optical-sizing: auto;
+        font-style: normal;
+    }
 
-body.EnfablerPage .devlogs
-{
-    background-color: rgb(76, 59, 102);
-    border: rgb(0, 0, 0) solid 2px;
-    border-radius: 15px 15px 40px 15px;
-    text-align: left;
-    line-height: 1;
+    .devlogs
+    {
+        background-color: rgb(76, 59, 102);
+        border: rgb(0, 0, 0) solid 2px;
+        border-radius: 15px 15px 40px 15px;
+        text-align: left;
+        line-height: 1;
 
-    padding-top: 0px;
+        padding-top: 0px;
 
-    box-shadow: inset 0 0 10px 5px rgba(44, 19, 3, 0.8);
-}
+        box-shadow: inset 0 0 10px 5px rgba(44, 19, 3, 0.8);
 
-body.EnfablerPage .devlogs
-{
-    background: url(https://img.itch.zone/aW1hZ2UvMjMyNDk1MC8xNDkyMTA4NS5wbmc=/original/EzDSge.png) center/cover no-repeat rgb(94, 82, 66);
-    background-blend-mode: exclusion;
+        background: url(https://img.itch.zone/aW1hZ2UvMjMyNDk1MC8xNDkyMTA4NS5wbmc=/original/EzDSge.png) center/cover no-repeat rgb(94, 82, 66);
+        background-blend-mode: exclusion;
+    }
 }

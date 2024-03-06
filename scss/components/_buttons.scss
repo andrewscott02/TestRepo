@@ -4,14 +4,14 @@
 
 .button
 {
+    @extend %textvalues;
+
     display: block;
     max-width: 200px;
     padding: 0 0;
 
-    color: white;
     text-align: center;
     font-weight: bold;
-    text-decoration: none;
     border: solid 3px;
     border-radius: 20px/10px;
 
@@ -38,17 +38,16 @@
 
 .button a
 {
+    @extend %textvalues;
+
     display: block;
     padding: 0.25rem;
-    color: rgb(255, 255, 255);
-    text-decoration: none;
     text-align: center;
 }
 
 .button a:visited
 {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
+    @extend %textvalues;
 }
 
 .current

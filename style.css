@@ -440,6 +440,27 @@ a
     padding:0px;
 }
 
+.grid
+{
+    justify-content: center;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: 200px 100px;
+    grid-auto-rows: minmax(150px, auto);
+    grid-gap: 10px;
+}
+
+.grid .item
+{
+    background-color: rgba(0, 255, 255, 0.301);
+}
+
+.grid .item:nth-of-type(odd)
+{
+    background-color: rgba(139, 139, 139, 0.432);
+}
+
 /* ========================================================== */
 /* Button Decoration Elements */
 /* ========================================================== */
@@ -527,6 +548,30 @@ ul li
         width: 70%;
         margin: 0 auto;
     } */
+
+    .grid .item:first-child
+    {
+        grid-row-start: 1;
+        grid-row-end: 3;
+
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .grid .item:nth-child(2)
+    {
+        grid-row-start: 3;
+        grid-row-end: 5;
+    }
+}
+
+@media screen and (min-width: 831px)
+{
+    .grid .item:nth-child(2)
+    {
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
 }
 
 @media screen and (min-width: 1047px), (orientation:landscape)
@@ -556,6 +601,15 @@ ul li
 
 @media screen and (min-width: 1275px)
 {
+    .grid .item:first-child
+    {
+        grid-row-start: 1;
+        grid-row-end: 4;
+
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+    
     #Details article
     {
         flex: 1.4;

@@ -3,10 +3,11 @@
 /* ========================================================== */
 
 // Colours
-$black      : #000;
-$grey       : #888;
-$darkgrey   : rgb(49, 49, 49);
-$white      : #fff;
+$black          : #000;
+$grey           : #888;
+$darkgrey       : rgb(49, 49, 49);
+$white          : #fff;
+$transparent    : rgb(0, 0, 0, 0);
 
 //Default Page Colours
 $color-primary              : rgb(147, 153, 187);
@@ -29,3 +30,8 @@ $color-button-base          : rgb(61, 60, 172);
 //Font Stacks
 $fontstack-default          : 'Courier New', Courier, monospace;
 $fontstack-paper            : "Merienda", cursive;
+
+// Media Query Breakpoints
+$brk-narrow        : "screen and (min-width: 580px), (orientation:landscape)";
+$brk-wide          : "screen and (min-width: 1047px), (orientation:landscape)";
+$brk-full          : "screen and (min-width: 1275px)";

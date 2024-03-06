@@ -1,0 +1,13 @@
+/* ========================================================== */
+/* Mixins - Mixins are like functions that set
+values according to specified parameters */
+/* ========================================================== */
+
+//Text
+@mixin text($size, $lineHeight: null, $weight: null, $color:null)
+{
+    font-size: $size;
+    line-height: $lineHeight;
+    font-weight: $weight;
+    color: $color;
+}

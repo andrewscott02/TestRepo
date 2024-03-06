@@ -1,0 +1,31 @@
+/* ========================================================== */
+/* Variables */
+/* ========================================================== */
+
+// Colours
+$black      : #000;
+$grey       : #888;
+$darkgrey   : rgb(49, 49, 49);
+$white      : #fff;
+
+//Default Page Colours
+$color-primary              : rgb(147, 153, 187);
+$color-secondary            : rgb(62, 122, 110);
+$color-paper-primary        : rgb(147, 153, 187);
+$color-paper-secondary      : rgb(62, 122, 110);
+
+$color-header               : rgb(22, 22, 22);
+$color-navbar               : $darkgrey;
+$color-footer               : $darkgrey;
+
+$color-text-light           : $white;
+$color-text-dark            : $black;
+
+$color-shadow               : rgba(0, 10, 30, 0.8);
+$color-border               : $black;
+
+$color-button-base          : rgb(61, 60, 172);
+
+//Font Stacks
+$fontstack-default          : 'Courier New', Courier, monospace;
+$fontstack-paper            : "Merienda", cursive;

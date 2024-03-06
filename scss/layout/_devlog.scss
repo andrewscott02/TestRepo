@@ -4,7 +4,7 @@
 
 .devlogs h3
 {
-    background-color: rgba(139, 139, 139, 0.432);
+    background-color: $grey;
     text-align: center;
 }
 
@@ -19,7 +19,7 @@
     text-align: right;
     padding-top: 0px;
     padding-bottom: 20px;
-    background-color:rgba(255, 255, 255, 0);
+    background-color: $black;
 }
 
 /* Combinator: Use > to target direct children */
@@ -30,7 +30,7 @@
 
 ol[class="devlogs"] > li:nth-of-type(odd)
 {
-    background-color: rgba(139, 139, 139, 0.432);
+    background-color: $grey;
 }
 
 /* Gets the last item in the devlogs list and then gets the anchor tag within

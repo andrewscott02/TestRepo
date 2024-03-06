@@ -7,8 +7,8 @@ body
     display: flex;
     flex-direction: column;
     margin: 0 0 8px;
-    background-color: rgb(62, 122, 110);
-    font-family: 'Courier New', Courier, monospace;
+    background-color: $color-secondary;
+    font-family: $fontstack-default;
     font-optical-sizing: auto;
     font-style: normal;
 
@@ -21,8 +21,8 @@ body
 
 main
 {
-    background-color: rgb(147, 153, 187);
-    border: rgb(0, 0, 0) solid 2px;
+    background-color: $color-primary;
+    border: $color-border solid 2px;
     border-radius: 40px 15px 40px 15px;
     padding: 20px;
     margin-top: 120px;
@@ -31,7 +31,7 @@ main
     max-width: 1200px;
     margin: 0 auto;
 
-    box-shadow: inset 0 0 20px 10px rgba(0, 10, 30, 0.8);
+    box-shadow: inset 0 0 20px 10px $color-shadow;
 }
 
 /* ========================================================== */
@@ -60,14 +60,14 @@ ul li
 
 a
 {
-    color: rgb(55, 12, 136);
+    color: $color-button-base;
 }
 
 /* ========================================================== */
 /* Page Specific Styling Elements */
 /* ========================================================== */
 
-body.EnfablerPage
+body.PaperPage
 {
     background-color: rgb(48, 27, 4);
     background-image: url(https://img.freepik.com/premium-vector/vintage-wooden-background-cartoon-brown-wood-table-great-design-any-purposes_450469-201.jpg);
@@ -82,7 +82,7 @@ body.EnfablerPage
 
         box-shadow: inset 0 0 20px 10px rgba(30, 11, 0, 0.8);
 
-        font-family: "Merienda", cursive;
+        font-family: $fontstack-paper;
         font-optical-sizing: auto;
         font-style: normal;
     }
@@ -90,7 +90,7 @@ body.EnfablerPage
     .devlogs
     {
         background-color: rgb(76, 59, 102);
-        border: rgb(0, 0, 0) solid 2px;
+        border: $color-border solid 2px;
         border-radius: 15px 15px 40px 15px;
         text-align: left;
         line-height: 1;

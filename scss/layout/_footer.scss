@@ -4,10 +4,9 @@
 
 footer
 {
-    font-family: 'Courier New', Courier, monospace;
     margin-top: 20px;
-    color:white;
-    background-color: rgb(65, 65, 65);
+    color:$color-text-light;
+    background-color: $color-footer;
 }
 
 footer p

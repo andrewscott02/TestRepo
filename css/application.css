@@ -331,24 +331,10 @@ ul {
 }
 
 .button:hover {
-  background-image: linear-gradient(-45deg, rgba(79, 78, 134, 0.75) 0%, rgb(255, 255, 255) 25%, rgba(79, 78, 134, 0.75) 50%, rgba(52, 51, 104, 0.75));
-  background-color: rgb(61, 60, 172);
-  border-color: rgb(0, 0, 0);
-  box-shadow: inset 0 0 20px 10px rgba(0, 10, 30, 0.8);
   cursor: pointer;
-  /* font-size: 1.25rem;
-  padding: 0.35rem 1rem;
-  font-weight: bolder; */
 }
 
 /*When tabbed to*/
-.button:focus {
-  background-image: linear-gradient(-45deg, rgba(79, 78, 134, 0.75) 0%, rgb(255, 255, 255) 25%, rgba(79, 78, 134, 0.75) 50%, rgba(52, 51, 104, 0.75));
-  background-color: rgb(61, 60, 172);
-  border-color: rgb(48, 48, 100);
-  box-shadow: inset 0 0 20px 10px rgba(0, 10, 30, 0.8);
-}
-
 .button a {
   display: block;
   padding: 0.25rem;
@@ -360,12 +346,6 @@ ul {
 .button a:visited {
   color: rgb(255, 255, 255);
   text-decoration: none;
-}
-
-.current {
-  background-image: linear-gradient(-45deg, rgba(79, 78, 134, 0.75) 0%, rgb(255, 255, 255) 25%, rgba(79, 78, 134, 0.75) 50%, rgba(52, 51, 104, 0.75));
-  background-color: rgba(97, 96, 184, 0.75);
-  box-shadow: inset 0 0 20px 10px rgba(4, 20, 53, 0.8);
 }
 
 /* ========================================================== */
@@ -408,6 +388,16 @@ a[target=_blank]::after {
 
 .InProgress a {
   color: rgb(8, 25, 75);
+}
+
+/* ========================================================== */
+/* Button - Hover or targetted colour and borders */
+/* ========================================================== */
+.button:hover, .button:focus, .current {
+  background-image: linear-gradient(-45deg, rgba(79, 78, 134, 0.75) 0%, rgb(255, 255, 255) 25%, rgba(79, 78, 134, 0.75) 50%, rgba(52, 51, 104, 0.75));
+  background-color: rgb(61, 60, 172);
+  border-color: rgb(0, 0, 0);
+  box-shadow: inset 0 0 20px 10px rgba(0, 10, 30, 0.8);
 }
 
 /* ========================================================== */

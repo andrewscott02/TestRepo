@@ -1,0 +1,30 @@
+/* ========================================================== */
+/* Details Elements */
+/* ========================================================== */
+
+#Details .flexContainer,
+.ProjectOverview
+{
+    flex-direction: column;
+    align-items: center;
+}
+
+#Details section
+{
+    margin-bottom: auto;
+    flex: 1;
+}
+
+#Details section p::first-letter
+{
+    float:left;
+    font-size: 3em;
+    color: rgb(0, 0, 0);
+    margin-right: -0.5rem;
+    line-height: 0.5;
+}
+
+#Details article
+{
+    flex: 1.1;
+}

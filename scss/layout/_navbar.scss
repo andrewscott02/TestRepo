@@ -1,0 +1,68 @@
+/* ========================================================== */
+/* Navbar Elements */
+/* ========================================================== */
+
+nav
+{
+    margin-bottom: 20px;
+}
+
+.navbar
+{
+    width: 100%;
+    background-color: rgb(49, 49, 49);
+    
+    top:0vh;
+}
+
+.navbar .item
+{
+    max-width: 100%;
+    flex-grow: 1;
+}
+
+.navbar .item .social
+{
+    max-width: 100%;
+}
+
+.navbar ul
+{
+    width: 100%;
+    margin: 0 auto;
+    /* margin: 0 15em 0; */
+}
+
+#socialnavbuttonstart
+{
+    margin-right: auto;
+}
+
+/* Combinator: Use + to get immediate siblings of type
+                Use ~ to select all siblings of type
+#socialnavbuttonstart + div
+{
+    margin-left: auto;
+    background-color: black;
+}
+*/
+
+.navbar .rightAligned
+{
+    justify-content: right;
+}
+
+ul
+{
+    padding-inline-start: 0px
+}
+
+.navbar li
+{
+    display: block;
+    width: 100%;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+}

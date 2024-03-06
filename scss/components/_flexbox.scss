@@ -1,0 +1,20 @@
+/* ========================================================== */
+/* Flexbox Elements */
+/* ========================================================== */
+
+.flexContainer
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.row
+{
+    flex: 1;
+}
+
+.InProgress a
+{
+    color: rgb(8, 25, 75)
+}

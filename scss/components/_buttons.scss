@@ -1,0 +1,99 @@
+/* ========================================================== */
+/* Button Elements */
+/* ========================================================== */
+
+.button
+{
+    display: block;
+    max-width: 200px;
+    padding: 0 0;
+
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    border: solid 3px;
+    border-radius: 20px/10px;
+
+    /* background-color: rgba(52, 51, 104, 0.75); */
+    background-image: linear-gradient(130deg, rgba(79, 78, 134, 0.75) 0%, rgb(255, 255, 255) 25%, rgba(79, 78, 134, 0.75) 50%, rgba(52, 51, 104, 0.75));
+
+    /* Darker border at bottom and lighter border at top to appear 3D */
+    border-color: rgb(147, 129, 211) rgb(78, 77, 139) rgb(22, 21, 63);
+    box-shadow: inset 0 0 20px 10px rgba(0, 10, 30, 0.8),
+                    3px 4px 5px rgba(10, 10, 10, 0.8);
+}
+
+.button:hover
+{
+    background-image: linear-gradient(-45deg, rgba(79, 78, 134, 0.75) 0%, rgb(255, 255, 255) 25%, rgba(79, 78, 134, 0.75) 50%, rgba(52, 51, 104, 0.75));
+    background-color: rgb(61, 60, 172);
+    border-color: rgb(0, 0, 0);
+    box-shadow: inset 0 0 20px 10px rgba(0, 10, 30, 0.8);
+
+    cursor: pointer;
+    /* font-size: 1.25rem;
+    padding: 0.35rem 1rem;
+    font-weight: bolder; */
+}
+
+/*When tabbed to*/
+.button:focus
+{
+    background-image: linear-gradient(-45deg, rgba(79, 78, 134, 0.75) 0%, rgb(255, 255, 255) 25%, rgba(79, 78, 134, 0.75) 50%, rgba(52, 51, 104, 0.75));
+    background-color: rgb(61, 60, 172);
+    border-color: rgb(48, 48, 100);
+    box-shadow: inset 0 0 20px 10px rgba(0, 10, 30, 0.8);
+}
+
+.button a
+{
+    display: block;
+    padding: 0.25rem;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-align: center;
+}
+
+.button a:visited
+{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.current
+{
+    background-image: linear-gradient(-45deg, rgba(79, 78, 134, 0.75) 0%, rgb(255, 255, 255) 25%, rgba(79, 78, 134, 0.75) 50%, rgba(52, 51, 104, 0.75));
+    background-color: rgba(97, 96, 184, 0.75);
+    box-shadow: inset 0 0 20px 10px rgba(4, 20, 53, 0.8);
+}
+
+/* ========================================================== */
+/* Button Decoration Elements */
+/* ========================================================== */
+
+#back-to-top
+{
+    font-size: 1.3rem;
+    display: block;
+    text-align: center;
+}
+
+/* Adds arrows pointing up */
+#back-to-top::before, #back-to-top::after
+{
+    content: "\2191";
+}
+
+/* Adds arrows for external links that open a tab */
+a[target="_blank"]::after
+{
+    content: "\21D7";
+    margin-left: 10px;
+}
+
+/* Adds an envelope before the mail link */
+.mail::before
+{
+    content: "\2709";
+}

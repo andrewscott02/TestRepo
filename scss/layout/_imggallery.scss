@@ -1,0 +1,34 @@
+/* ========================================================== */
+/* Img Gallery Elements */
+/* ========================================================== */
+
+#Screenshots .flexContainer
+{
+    justify-content: center;
+}
+
+#Screenshots img
+{
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    border:0px;
+    padding:0px;
+}
+
+#Gallery .grid
+{
+    justify-content: center;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: auto;
+    grid-auto-rows: auto;
+    grid-gap: 5px;
+}
+
+#Gallery .grid img
+{
+    width: 100%;
+    height: auto;
+}

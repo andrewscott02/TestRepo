@@ -1,0 +1,59 @@
+/* ========================================================== */
+/* Devlog Elements */
+/* ========================================================== */
+
+.devlogs h3
+{
+    background-color: rgba(139, 139, 139, 0.432);
+    text-align: center;
+}
+
+.devlogs
+{
+    font-weight: bolder;
+    padding: 40px;
+}
+
+.devlogs footer
+{
+    text-align: right;
+    padding-top: 0px;
+    padding-bottom: 20px;
+    background-color:rgba(255, 255, 255, 0);
+}
+
+/* Combinator: Use > to target direct children */
+.devlogs > li
+{
+    width: 100%;
+}
+
+ol[class="devlogs"] > li:nth-of-type(odd)
+{
+    background-color: rgba(139, 139, 139, 0.432);
+}
+
+/* Gets the last item in the devlogs list and then gets the anchor tag within
+    Then it adds a red new text before */
+ol[class="devlogs"] > li:nth-last-of-type(1) > a::before
+{
+    content: "*NEW* ";
+    color: red;
+}
+
+/* Checkbox styling to hide older devlogs */
+
+input[type="checkbox"]
+{
+    margin-bottom: 2rem;
+}
+
+input[type="checkbox"]:not(:checked) ~ li
+{
+    display: none;
+}
+
+input[type="checkbox"]:not(:checked) ~ li:nth-last-of-type(1)
+{
+    display: list-item;
+}

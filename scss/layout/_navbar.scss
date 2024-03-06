@@ -5,63 +5,76 @@
 nav
 {
     margin-bottom: 20px;
-}
 
-.navbar
-{
-    width: 100%;
-    background-color: $color-navbar;
-    
-    top:0vh;
-}
+    &.navbar
+    {
+        width: 100%;
+        background-color: $color-navbar;
+        
+        top:0vh;
+    }
 
-.navbar .item
-{
-    max-width: 100%;
-    flex-grow: 1;
-}
+    &.navbar .item
+    {
+        max-width: 100%;
+        flex-grow: 1;
+    }
 
-.navbar .item .social
-{
-    max-width: 100%;
-}
+    &.navbar ul
+    {
+        width: 100%;
+        margin: 0 auto;
+        /* margin: 0 15em 0; */
+    }
 
-.navbar ul
-{
-    width: 100%;
-    margin: 0 auto;
-    /* margin: 0 15em 0; */
-}
+    #socialnavbuttonstart
+    {
+        margin-right: auto;
+    }
 
-#socialnavbuttonstart
-{
-    margin-right: auto;
-}
+    /* Combinator: Use + to get immediate siblings of type
+                    Use ~ to select all siblings of type
+    #socialnavbuttonstart + div
+    {
+        margin-left: auto;
+        background-color: black;
+    }
+    */
 
-/* Combinator: Use + to get immediate siblings of type
-                Use ~ to select all siblings of type
-#socialnavbuttonstart + div
-{
-    margin-left: auto;
-    background-color: black;
-}
-*/
+    &.navbar .rightAligned
+    {
+        justify-content: right;
+    }
 
-.navbar .rightAligned
-{
-    justify-content: right;
-}
+    &.navbar li
+    {
+        display: block;
+        width: 100%;
 
-ul
-{
-    padding-inline-start: 0px
-}
+        font-optical-sizing: auto;
+        font-style: normal;
+    }
 
-.navbar li
-{
-    display: block;
-    width: 100%;
+    @media #{$brk-narrow}
+    {
+        &.navbar
+        {
+            position: sticky;
+        }
 
-    font-optical-sizing: auto;
-    font-style: normal;
+        &.navbar .button
+        {
+            flex-grow: 0;
+        }
+
+        &.navbar li
+        {
+            display: inline-block;
+            width: 120px;
+
+            font-family: $fontstack-default;
+            font-optical-sizing: auto;
+            font-style: normal;
+        }
+    }
 }

@@ -9,22 +9,53 @@
     align-items: center;
 }
 
-#Details section
+#Details
 {
-    margin-bottom: auto;
-    flex: 1;
-}
+    section
+    {
+        margin-bottom: auto;
+        flex: 1;
+    }
+    
+    section p::first-letter
+    {
+        float:left;
+        font-size: 3em;
+        color: $black;
+        margin-right: -0.5rem;
+        line-height: 0.5;
+    }
+    
+    article
+    {
+        flex: 1.1;
+    }
 
-#Details section p::first-letter
-{
-    float:left;
-    font-size: 3em;
-    color: $black;
-    margin-right: -0.5rem;
-    line-height: 0.5;
-}
+    @media #{$brk-wide}
+    {
+        article
+        {
+            margin-left: 3rem;
+            flex: 1.2;
+        }
 
-#Details article
-{
-    flex: 1.1;
+        .flexContainer
+        {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .flexContainer
+        {
+            flex-wrap: nowrap;
+        }
+    }
+
+    @media #{$brk-full}
+    {
+        #Details article
+        {
+            flex: 1.4;
+        }
+    }
 }

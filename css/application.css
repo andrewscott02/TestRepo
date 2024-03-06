@@ -48,6 +48,10 @@ main {
 /* ========================================================== */
 /* List Elements */
 /* ========================================================== */
+ul {
+  padding-inline-start: 0px;
+}
+
 ul li {
   list-style: none;
 }
@@ -258,54 +262,55 @@ header h1 {
 /* ========================================================== */
 nav {
   margin-bottom: 20px;
+  /* Combinator: Use + to get immediate siblings of type
+                  Use ~ to select all siblings of type
+  #socialnavbuttonstart + div
+  {
+      margin-left: auto;
+      background-color: black;
+  }
+  */
 }
-
-.navbar {
+nav.navbar {
   width: 100%;
   background-color: rgb(49, 49, 49);
   top: 0vh;
 }
-
-.navbar .item {
+nav.navbar .item {
   max-width: 100%;
   flex-grow: 1;
 }
-
-.navbar .item .social {
-  max-width: 100%;
-}
-
-.navbar ul {
+nav.navbar ul {
   width: 100%;
   margin: 0 auto;
   /* margin: 0 15em 0; */
 }
-
-#socialnavbuttonstart {
+nav #socialnavbuttonstart {
   margin-right: auto;
 }
-
-/* Combinator: Use + to get immediate siblings of type
-                Use ~ to select all siblings of type
-#socialnavbuttonstart + div
-{
-    margin-left: auto;
-    background-color: black;
-}
-*/
-.navbar .rightAligned {
+nav.navbar .rightAligned {
   justify-content: right;
 }
-
-ul {
-  padding-inline-start: 0px;
-}
-
-.navbar li {
+nav.navbar li {
   display: block;
   width: 100%;
   font-optical-sizing: auto;
   font-style: normal;
+}
+@media screen and (min-width: 580px), (orientation:landscape) {
+  nav.navbar {
+    position: sticky;
+  }
+  nav.navbar .button {
+    flex-grow: 0;
+  }
+  nav.navbar li {
+    display: inline-block;
+    width: 120px;
+    font-family: "Courier New", Courier, monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
 }
 
 /* ========================================================== */
@@ -333,7 +338,6 @@ ul {
   margin-bottom: auto;
   flex: 1;
 }
-
 #Details section p::first-letter {
   float: left;
   font-size: 3em;
@@ -341,9 +345,26 @@ ul {
   margin-right: -0.5rem;
   line-height: 0.5;
 }
-
 #Details article {
   flex: 1.1;
+}
+@media screen and (min-width: 1047px), (orientation:landscape) {
+  #Details article {
+    margin-left: 3rem;
+    flex: 1.2;
+  }
+  #Details .flexContainer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #Details .flexContainer {
+    flex-wrap: nowrap;
+  }
+}
+@media screen and (min-width: 1275px) {
+  #Details #Details article {
+    flex: 1.4;
+  }
 }
 
 /* ========================================================== */
@@ -447,39 +468,6 @@ a[target=_blank]::after {
   }
   #back-to-top {
     display: none;
-  }
-}
-@media screen and (min-width: 580px), (orientation:landscape) {
-  .navbar {
-    position: sticky;
-  }
-  .navbar .button {
-    flex-grow: 0;
-  }
-  .navbar li {
-    display: inline-block;
-    width: 120px;
-    font-family: "Courier New", Courier, monospace;
-    font-optical-sizing: auto;
-    font-style: normal;
-  }
-}
-@media screen and (min-width: 1047px), (orientation:landscape) {
-  #Details article {
-    margin-left: 3rem;
-    flex: 1.2;
-  }
-  #Details .flexContainer {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  #Details .flexContainer {
-    flex-wrap: nowrap;
-  }
-}
-@media screen and (min-width: 1275px) {
-  #Details article {
-    flex: 1.4;
   }
 }
 .debug {

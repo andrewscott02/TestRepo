@@ -23,6 +23,8 @@ main
 {
     @include text(1em, 1.5, $color: $color-text-dark);
 
+    color: $color-text-light;
+
     background-color: $color-primary;
     border: $color-border solid 2px;
     border-radius: 40px 15px 40px 15px;
@@ -67,7 +69,7 @@ ul li
 
 a
 {
-    color: $color-button-base;
+    color: $color-text-link;
 }
 
 /* ========================================================== */
@@ -84,6 +86,8 @@ body.PaperPage
 
     main
     {
+        color: $color-text-dark;
+
         background: url(https://media.istockphoto.com/id/182154211/photo/old-paper-textere.webp?b=1&s=170667a&w=0&k=20&c=ym_eO6PKLl6itLgksTBO-ykUVtQwYabUfWXYyuL2iCU=) center/cover papayawhip;
         background-size: 100%;
 

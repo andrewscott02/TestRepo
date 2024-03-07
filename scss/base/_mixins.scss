@@ -11,3 +11,28 @@ values according to specified parameters */
     font-weight: $weight;
     color: $color;
 }
+
+//Buttons - Not working yet
+@mixin btnstyle($bkgrndCol: $color-button-base,
+                $bkgrndColNav: $color-navbutton-base,
+                $angle: 130deg,
+                $boxShadow: $btn-shadow,
+                $insetShadow: $btn-shadow-inset)
+{
+    background-image: linear-gradient($angle,
+                                        rgba(darken($bkgrndCol, 25%), 0.2) 0%,
+                                        lighten($bkgrndCol, 50%) 25%,
+                                        rgba(darken($bkgrndCol, 10%), 0.2) 50%,
+                                        rgba(darken($bkgrndCol, 50%), 0.2));
+    background-color: $bkgrndCol;
+
+    box-shadow: $insetShadow,
+                    $boxShadow;
+
+    nav &
+    {
+        @extend %nav;
+        background-color: $bkgrndColNav;
+        box-shadow: $insetShadow;
+    }
+}

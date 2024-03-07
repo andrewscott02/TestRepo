@@ -5,6 +5,7 @@
 .button
 {
     @extend %textvalues;
+    @include btnstyle();
 
     display: block;
     max-width: 200px;
@@ -12,47 +13,39 @@
 
     text-align: center;
     font-weight: bold;
-    border: solid 3px;
+    //border: solid 3px;
     border-radius: 20px/10px;
 
-    /* background-color: rgba(52, 51, 104, 0.75); */
-    background-image: linear-gradient(130deg, rgba(79, 78, 134, 0.75) 0%, rgb(255, 255, 255) 25%, rgba(79, 78, 134, 0.75) 50%, rgba(52, 51, 104, 0.75));
+    a
+    {
+        @extend %textvalues;
 
-    /* Darker border at bottom and lighter border at top to appear 3D */
-    border-color: rgb(147, 129, 211) rgb(78, 77, 139) rgb(22, 21, 63);
-    box-shadow: inset 0 0 20px 10px rgba(0, 10, 30, 0.8),
-                    3px 4px 5px rgba(10, 10, 10, 0.8);
-}
+        display: block;
+        padding: 0.25rem;
+        text-align: center;
+    }
 
-.button:hover
-{
-    @extend %pushed;
-    cursor: pointer;
-}
+    a:visited
+    {
+        @extend %textvalues;
+    }
 
-/*When tabbed to*/
-.button:focus
-{
-    @extend %pushed;
-}
+    &:hover
+    {
+        @include btnstyle($color-button-pushed, $color-navbutton-pushed, -45deg, $shadow-none, $btn-shadow-inset-small);
+        cursor: pointer;
+    }
 
-.button a
-{
-    @extend %textvalues;
+    //When tabbed to
+    &:focus
+    {
+        @include btnstyle($color-button-pushed, $color-navbutton-pushed, -45deg, $shadow-none, $btn-shadow-inset-small);
+    }
 
-    display: block;
-    padding: 0.25rem;
-    text-align: center;
-}
-
-.button a:visited
-{
-    @extend %textvalues;
-}
-
-.current
-{
-    @extend %pushed;
+    &.current
+    {
+        @include btnstyle($color-button-pushed, $color-navbutton-pushed, -45deg, $shadow-none, $shadow-none);
+    }
 }
 
 /* ========================================================== */

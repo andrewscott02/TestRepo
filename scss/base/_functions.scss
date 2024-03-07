@@ -1,0 +1,15 @@
+/* ========================================================== */
+/* Functions */
+/* ========================================================== */
+
+@function px-pc($target, $context: $max-width)
+{
+    @return ($target/$context) * 100%;
+}
+
+@function per-line($items)
+{
+    $g-pct: px-px($gutter) * 2;
+    $g-total: $items * $g-pct;
+    @return (100%/$items)- $g-total;
+}

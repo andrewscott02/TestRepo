@@ -2,6 +2,12 @@
 /* Img Gallery Elements */
 /* ========================================================== */
 
+#Screenshots
+{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 #Screenshots .flexContainer
 {
     justify-content: center;
@@ -9,9 +15,16 @@
 
 #Screenshots img
 {
-    width: 100%;
+    width: 460px;
     height: auto;
-    max-width: 300px;
+    border:0px;
+    padding:0px;
+}
+
+#Screenshots iframe
+{
+    width: 460px;
+    height: 250px;
     border:0px;
     padding:0px;
 }

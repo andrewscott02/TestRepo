@@ -4,13 +4,25 @@
 
 .ProjectCollection
 {
-    color: $color-text-dark;
-
+    color: $color-text-light;
     justify-content: space-around;
+
+    // padding: 10px;
+    // border-radius: 10px;
+    // background-color: $grey;
 }
 
 .ProjectOverview
 {
     display: flex;
-    background-color: $grey;
+    
+    border-radius: 10px;
+    margin: 2px;
+    background-color: darken($color-secondary, 8%);
+    box-shadow: $btn-shadow-inset;
+}
+
+.ProjectOverview h3
+{
+    margin-bottom: 0;
 }

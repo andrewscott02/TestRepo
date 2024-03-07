@@ -37,7 +37,7 @@
     }
 
     //When tabbed to
-    &:focus
+    &:focus, &:target
     {
         @include btnstyle($color-button-pushed, $color-navbutton-pushed, -45deg, $shadow-none, $btn-shadow-inset-small);
     }

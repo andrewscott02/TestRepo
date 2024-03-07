@@ -27,17 +27,25 @@ $color-shadow               : rgba(1, 0, 30, 0.8);
 $color-shadow-transparent   : rgba(0, 11, 30, 0.4);
 $color-border               : $black;
 
-$color-navbutton-base          : rgb(22, 22, 22);
-$color-navbutton-pushed        : $color-secondary;
-
 $color-button-base          : $color-secondary;
 $color-button-pushed        : rgb(23, 7, 65);
+
+$color-navbutton-base          : rgb(22, 22, 22);
+$color-navbutton-pushed        : $color-secondary;
 
 //Button Shadows
 $btn-shadow                 : 1px 2px 3px $color-shadow;
 $btn-shadow-inset           : inset 0 0 20px 10px rgba($color-shadow, 0.2);
 $btn-shadow-inset-small     : inset 0 0 6px 4px rgba($color-shadow, 0.2);
 $shadow-none                : 0 0 0 0 $color-shadow-transparent;
+
+//Game Specific Colours
+$game-themes:
+(
+    "enfabler" : #fff,
+    "coa" : #a1a,
+    "creak" : #11a,
+);
 
 //Font Stacks
 $fontstack-default          : 'Courier New', Courier, monospace;

@@ -73,6 +73,19 @@ a
 }
 
 /* ========================================================== */
+/* Game Specific Styling Elements */
+/* ========================================================== */
+
+//Loops through all game themes and sets their colour
+@each $theme, $color in $game-themes
+{
+    .ProjectCollection .#{$theme}
+    {
+        color: $color;
+    }
+}
+
+/* ========================================================== */
 /* Page Specific Styling Elements */
 /* ========================================================== */
 

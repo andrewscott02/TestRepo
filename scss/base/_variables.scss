@@ -7,7 +7,7 @@ $black          : #000;
 $grey           : #888;
 $darkgrey       : rgb(49, 49, 49);
 $white          : #fff;
-$transparent    : rgb(0, 0, 0, 0);
+$transparent    : rgba(0, 0, 0, 0);
 
 //Default Page Colours
 $color-primary              : rgb(46, 52, 56);
@@ -27,6 +27,20 @@ $color-shadow               : rgba(1, 0, 30, 0.8);
 $color-shadow-transparent   : rgba(0, 11, 30, 0.4);
 $color-border               : $black;
 
+$color-button:
+(
+    default: 
+    (
+        base: $color-secondary,
+        pushed: rgb(23, 7, 65),
+    ),
+    navbar:
+    (
+        base: rgb(23, 7, 65),
+        pushed: $color-secondary,
+    )
+);
+
 $color-button-base          : $color-secondary;
 $color-button-pushed        : rgb(23, 7, 65);
 
@@ -42,7 +56,7 @@ $shadow-none                : 0 0 0 0 $color-shadow-transparent;
 //Game Specific Colours
 $game-themes:
 (
-    "enfabler" : #fff,
+    "enfabler" : #ff9900,
     "coa" : #a1a,
     "creak" : #11a,
 );

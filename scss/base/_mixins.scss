@@ -12,7 +12,7 @@ values according to specified parameters */
     color: $color;
 }
 
-//Buttons - Not working yet
+//Buttons
 @mixin btnstyle($bkgrndCol: $color-button-base,
                 $bkgrndColNav: $color-navbutton-base,
                 $angle: 130deg,

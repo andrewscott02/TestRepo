@@ -13,3 +13,21 @@
     $g-total: $items * $g-pct;
     @return (100%/$items)- $g-total;
 }
+
+@function GetButtonColor($pushed: false, $nav: false)
+{
+    $action: "base";
+    $type: "default";
+    
+    @if ($pushed)
+    {
+        $action: "pushed";
+    }
+    
+    @if ($nav)
+    {
+        $type: "navbar";
+    }
+
+    @return map-get(map-get($color-button, $type), $key: $action);
+}

@@ -1,0 +1,42 @@
+/* Style for the main hero image container */
+#HeroImage
+{
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Images/Banner_edited.jpg");
+
+	background-position: center;
+	background-size: 100% auto;
+    background-repeat: no-repeat;
+	height: 50%;
+
+    box-shadow: $hero-img-shadow;
+}
+
+/* Style for the elements in the hero image */
+.heroElements
+{
+    a
+    {
+        position: relative;
+	    top:50%;
+	    left: 50%;
+	    transform: translate(-50%, -50%);
+        align-self: center;
+    }
+}
+
+.heroTitle
+{
+	text-align: center;
+	color: white;
+	
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.heroText
+{
+	text-align: center;
+	color: white;
+
+	font-size: 15px;
+}

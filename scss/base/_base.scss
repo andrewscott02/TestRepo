@@ -72,6 +72,14 @@ a
     color: $color-text-link;
 }
 
+iframe
+{
+	margin: 2rem;
+    box-shadow: $hero-img-shadow;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
 /* ========================================================== */
 /* Game Specific Styling Elements */
 /* ========================================================== */

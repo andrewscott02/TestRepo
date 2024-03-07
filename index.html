@@ -8,13 +8,16 @@
 </head>
 <body>
     <header id="top">
+        <div class = "icon">
+            <img src="https://andrewscott02.github.io/Images/Banner%20Character.jpg">
+        </div>
         <h1>Andrew Scott</h1>
     </header>
 
     <nav class="navbar">
         <ul class="flexContainer">
-            <li class="item button"><a href="#">Home</a></li>
-            <li class="item button current"><a href="index.html">Games</a></li>
+            <li class="item button current"><a href="index.html">Home</a></li>
+            <li class="item button"><a href="games.html">Games</a></li>
             <li class="item button"><a href="#">Projects</a></li>
             <li class="item button" id="socialnavbuttonstart"><a href="form.html">About</a></li>
 
@@ -25,9 +28,32 @@
         </ul>
     </nav>
 
+    <!-- Main hero image container, includes background image -->
+    <section id = "HeroImage">
+        <!-- Hero image elements -->
+        <div class="heroElements">
+            <h1 class = "heroTitle">
+                Andrew Scott
+            </h1>
+
+            <p class = "heroText">
+                Games Programmer
+            </p>
+
+            <a href="about.html" class="button">About Me</a>
+        </div>
+    </section>
+
     <main>
+        <section id = "Showreel">
+            <h2>Showreel</h2>
+            <div align = "center">
+                <iframe width = "560" height = "315" src="https://www.youtube.com/embed/bBJG4Cf6Yg8?si=IIOVcIAw24Y9OFXB" title="YouTube  video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </section>
+
         <section id = "Games">
-            <h2>Games</h2>
+            <h2>Featured Projects</h2>
             <div class="ProjectCollection flexContainer">
                 <div class="ProjectOverview">
                     <h3 class="enfabler">Enfabler</h3>

@@ -47,6 +47,8 @@ $color-button-pushed        : rgb(23, 7, 65);
 $color-navbutton-base          : rgb(22, 22, 22);
 $color-navbutton-pushed        : $color-secondary;
 
+$hero-img-shadow            : 2px 4px 6px $color-shadow;
+
 //Button Shadows
 $btn-shadow                 : 1px 2px 3px $color-shadow;
 $btn-shadow-inset           : inset 0 0 20px 10px rgba($color-shadow, 0.2);

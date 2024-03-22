@@ -1,6 +1,10 @@
-var name = prompt("What is your name?");
-alert(`Hi, ${name}. Want to see something cool?`);
-document.querySelector('html').innerHTML = `
-  <h1>Welcome to ${name}'s site!</h1>
-  <img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif">
-`;
+const name = prompt("What is your name?");
+
+if (name != null)
+{
+  alert(`Hi, ${name}. Want to see something cool?`);
+  document.querySelector('h1').innerHTML = `
+    Welcome to ${name}'s site!
+    <img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif">
+  `;
+}

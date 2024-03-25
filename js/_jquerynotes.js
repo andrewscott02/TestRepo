@@ -234,7 +234,7 @@ $("a").each(()=>{
 
 //#region Plugins - Useful Plugins
 
-/**
+/** Useful Plugins
  * Open dialogue boxes for form fields, buttons and content for other pages
  * jQuery Adaptive Modal - http://www.thepetedesign.com/demos/adaptive-modal_demo.html
  * 
@@ -251,6 +251,55 @@ $("a").each(()=>{
  * Framework for various features, including datepickers, drag and drop and others
  * jQuery UI - https://jqueryui.com/
 */
+
+/** Sites to Find Plugins
+ * Popular jQuery Plugins List - http://www.sitepoint.com/jquery-popular-plugins-list/
+ * Unheap - http://www.unheap.com/
+ */
+
+/** Tips for Selecting Plugins
+ * Make sure plugin does what you need
+ * Has good documentation
+ * Actively developed
+ * Responsive friendly
+ * Mobile friendly
+ */
+
+//#endregion
+
+//#region Plugins - Plugin Files
+
+/**Plugins will ussually have the following files
+ * JavaScript File (required)
+ * CSS File (optional)
+ * Images (optional) 
+ */
+
+//#endregion
+
+//#region Plugins - Adding a Plugin to a Web Page
+
+//After downloading the required files, move them to a folder
+//Recommend putting plugins in their own folders instead of integrating into your css and js files
+//Put the folder in your js folder
+
+/**
+ * Attach the CSS file using the link tag in your header (before your stylesheet)
+ * <link rell="stylesheet" href="path">
+ * 
+ * Attach jQuery using script tag, see jQuery section above
+ * 
+ * Attach the plugin JavaScipt file
+ * After jQuery script
+ * 
+ * Structure your HTML based on what the plugin needs
+ * 
+ * Add your own JavaScript
+ * 
+ * Select an element on the page using jQuery
+ * 
+ * Call the plugin function
+ */
 
 //#endregion
 

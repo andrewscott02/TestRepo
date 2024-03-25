@@ -1,3 +1,6 @@
+$("#headline").hide();
+$("#headline").fadeIn(1000);
+
 var content = document.getElementById("content");
 var listContent = content.getElementsByTagName("ol")[0];
 

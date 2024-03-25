@@ -1,4 +1,4 @@
-//#region Basics CourseCourse
+//#region Basics Course
 
 //#region Basics - Writing messages
 

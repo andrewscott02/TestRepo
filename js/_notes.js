@@ -592,11 +592,304 @@ var includesItem = daysInWeek.indexOf("Wednesday"); //Should return 2
 
 //#region Arrays - Multidimensional Arrays
 
+//Multidimensional array containing other arrays
 var multiArray = [];
-
 var student1 = ["Al", 5]
 var student2 = ["Rose", 7]
 var student3 = ["Ian", 3]
+multiArray = [student1, student2, student3];
+
+multiArray[2][0]; //Gets the 3rd item, then the 1st item in that array
+
+//#endregion
+
+//#endregion
+
+//#region Objects Course
+
+//#region Objects - Basics
+
+//#region Objects - Creating an Object Literal
+
+const person = 
+{
+    name: "Quincy",
+    city: "London",
+    age: 37,
+    isStudent: true,
+    skills: ["Javascript", "HTML", "CSS"]
+};
+
+//#endregion
+
+//#region Objects - Accessing Object Variables
+
+person.name;
+person.name = "Helen";
+
+const message = `Hi, I'm ${person.name}. I have ${person.skills.length} skills: ${person.skills.join(", ")}.`;
+
+person.nickname = "Tank"; //You can even add properties that weren't declared before
+
+//#endregion
+
+//#region Objects - Iterating through properties with For Loops
+
+//Similar to Foreach Loop
+for (let item in person)
+{
+    alert(`${[item]}: ${person[item]}`)
+}
+
+//#endregion
+
+//#region Objects - Useful Methods
+
+let objectKeys = Object.keys(person); //Returns an array of all of the property names in the object
+objectKeys.length; //You can access all of the standard array properties and methods too
+
+let objectValues = Object.values(person); //Returns an array with values instead
+
+//You can use the spread operator to merge objects
+const nameObj =
+{
+    firstName: 'Reggie',
+    lastName: 'Williams',
+};
+  
+const roleObj =
+{
+    title: 'Software developer',
+    skills: ['JavaScript', 'HTML', 'CSS'],
+    isTeacher: true
+};
+  
+// merge `name` and `role` into a `person` object
+const person =
+{  
+    ...nameObj,
+    ...roleObj
+};
+
+//#endregion
+
+//#endregion
+
+//#region Objects - Store Objects in Arrays
+
+//Instead of using multidimensional arrays,
+//You can use arrays of objects to groups similar data
+const questions = 
+[
+    {
+        question: "The assassin had a scar on his cheek in the shape of a...",
+        answer: "banana",
+        film: "Johnny English"
+    },
+    {
+        question: "Who broke the elevator?",
+        answer: "leonard",
+        film: "The Big Bang Theory"
+    },
+    {
+        question: "What is the name of Joey's chair?",
+        answer: "rosita",
+        film: "Friends"
+    },
+    {
+        question: "Who retrieved the pizza in the Darkest Timeline?",
+        answer: "troy",
+        film: "Community"
+    }
+]
+
+//#endregion
+
+//#endregion
+
+//#region Javascript and the DOM Course
+
+//#region DOM - Document Object Model
+
+//Document, HTML, Head, Body and other HTML elements can be used as objects in Javascript
+//Structuted as a tree; Head and Body are children of HTML, which is a child of Document
+//H1, P and UL are children of Body, LIs are children of ULs
+//Title is a child of Head
+
+/**
+*                 Document
+*              |            |
+*            Head          Body
+*             |         |    |   |
+*          Title       H1    P   UL
+*                                 |
+*                                 LI
+*/
+
+location.href; //Returns the URL
+
+document; //This object is the root of every node in the DOM
+
+//You can access different parts like so
+document.title;
+document.body;
+
+//You can even change values here
+document.title = "New web page title";
+document.body.style.backgroundColor = "tomato";
+document.body.innerHTML = "<h1>Hello world!</h1>";
+
+//#endregion
+
+//#region DOM - Browser Events and Event Listeners
+
+document.body.addEventListener("click", OnClick);
+
+function OnClick()
+{
+    document.querySelector("main").innerHTML += "<h1>Clicked</h1>";
+}
+
+//#endregion
+
+//#region DOM - Selecting Elements
+
+//#region DOM - Selecting an Element by ID
+
+var headline = document.getElementById("headline"); //Gets an object by id
+headline.style.border = "solid 2px red";
+
+//#region DOM - Adding Click Events to specific elements
+
+var btn = document.getElementById("btn");
+btn.addEventListener("click", OnBtnClick);
+
+function OnBtnClick()
+{
+    document.getElementById("content").innerHTML += "<h1>Clicked</h1>";
+    headline.style.border = headlineBorder;
+}
+
+//#endregion
+
+//#endregion
+
+//#region DOM - Selecting Elements by HTML Tag
+
+let tagElements = document.getElementsByTagName("li"); //Returns multiple elements by tag in the order they appear on the page
+
+//Note: This is not an array, but it is similar
+//This means they do not have the same properties and methods
+
+for (let i = 0; i < tagElements.length; i++)
+{
+    tagElements[i].style.color = "white";
+}
+
+//#endregion
+
+//#region DOM - Selecting Elements by Class Name
+
+let highlights = document.getElementsByClassName("highlights");
+
+//Foreach Loop
+for (const highlight of highlights)
+{
+    highlight.style.backgroundColor = "cornsilk";
+}
+
+//#endregion
+
+//#region DOM - Selecting Elements with CSS Queries
+
+document.querySelector("li"); //Gets first item with the li tag
+document.querySelector(".btn"); //Gets first item with the btn class
+document.querySelectorALL(".highlights"); //Gets all items with the highlights class
+
+//#endregion
+
+//#endregion
+
+//#region DOM - Getting and Setting Content
+
+//The following have the same effect, note that I do not need the 
+document.querySelector("h1").innerHTML = "<h1>New Text Content</h1>";
+document.querySelector("h1").textContent = "New Text Content";
+
+//Making a basic searchbar and changing header content to input value
+var searchBtn = document.getElementById("btn-search");
+searchBtn.addEventListener("click", SearchButton);
+
+var input = document.getElementById("form-search");
+
+function SearchButton()
+{
+    headline.textContent = input.value;
+    headline.style.border = "solid 2px red";
+
+    input.value = "";
+}
+
+//#endregion
+
+//#region DOM - Setting Element Attributes
+
+var input = document.getElementById("form-search");
+
+input.type; //Returns current type
+input.type = "checkbox"; //Sets type to checkbox
+
+input.class; //Class is reserved in Javascript, use className to get class instead
+input.className;
+input.classList; //Gets all classes?
+
+//#endregion
+
+//#region DOM - Setting Styles
+
+var hideBtn = document.getElementById("btn-hide");
+hideBtn.addEventListener("click", ToggleHideContent);
+
+var show = true;
+
+function ToggleHideContent()
+{
+    show = !show;
+    content.style.display = show ? "inline" : "none";
+    hideBtn.textContent = show ? "Hide" : "Show";
+}
+
+//#endregion
+
+//#region DOM - New DOM Elements
+
+var listContent = document.getElementsByTagName("ol");
+
+const newElement = document.createElement("li"); //Create the element
+newElement.textContent = "New Text Value"; //Setting the text value of the element
+
+listContent.append(newElement); //Adding the element to the DOM at the end
+listContent.prepend(newElement); //Adding the element to the DOM at the start
+
+//#region DOM - Inserting HTML at Specified Positions
+
+var listContent = document.querySelector("ol");
+
+listContent.insertAdjacentHTML
+(
+    "afterbegin",
+    `<li>Text Content</li>`
+);
+
+//#endregion
+
+//#endregion
+
+//#region DOM - Removing DOM Elements
+
+var listContent = document.getElementsByTagName("ol");
+const lastItem = listContent.querySelector("li:last-child");
+lastItem.remove();
 
 //#endregion
 

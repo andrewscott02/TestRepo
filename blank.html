@@ -9,9 +9,31 @@
 </head>
 <body>
 
-    <main>Basic Content</main>
+    <main>
+
+    <div id="headline">Basic Content</div>
+    <a id="btn-hide">Hide</a>
     
-    <script src="js/trivia.js"></script>
+    <div id="content">
+        <!-- aria-live property lets screen readers
+        know that this element may be changed.
+
+        The polite value will cause it to wait until
+        the current announcement is finished before
+        announcing the changes. -->
+        <ol aria-live="polite"></ol>
+    </div>
+
+    <form>
+        <input type="text" id="form-search">
+    </form>
+
+    <a id="btn">Create Task!</a>
+    <a id="btn-remove">Remove Task!</a>
+
+    </main>
+
+    <script src="js/DOM/onclick.js"></script>
 
 </body>
 </html>

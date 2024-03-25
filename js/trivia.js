@@ -1,9 +1,25 @@
 const questions = 
 [
-    ["The assassin had a scar on his cheek in the shape of a...", "banana", "Johnny English"],
-    ["Who broke the elevator?", "leonard", "The Big Bang Theory"],
-    ["What is the name of Joey's chair?", "rosita", "Friends"],
-    ["Who retrieved the pizza in the Darkest Timeline?", "troy", "Community"]
+    {
+        question: "The assassin had a scar on his cheek in the shape of a...",
+        answer: "banana",
+        film: "Johnny English"
+    },
+    {
+        question: "Who broke the elevator?",
+        answer: "leonard",
+        film: "The Big Bang Theory"
+    },
+    {
+        question: "What is the name of Joey's chair?",
+        answer: "rosita",
+        film: "Friends"
+    },
+    {
+        question: "Who retrieved the pizza in the Darkest Timeline?",
+        answer: "troy",
+        film: "Community"
+    }
 ]
 
 const watched = [];
@@ -16,18 +32,18 @@ alert("Before allowing you to view the website, I must test your knowledge first
 
 for(let i = 0; i < questions.length; i++)
 {
-    let guess = prompt(questions[i][0]);
-    let answer = questions[i][1];
+    let guess = prompt(questions[i].question);
+    let answer = questions[i].answer;
 
     if (guess.toLowerCase() === answer)
     {
         score ++;
-        watched.push(questions[i][2]);
+        watched.push(questions[i].film);
         alert("Correct");
     }
     else
     {
-        notWatched.push(questions[i][2]);
+        notWatched.push(questions[i].film);
         alert("Incorrect");
     }
 }

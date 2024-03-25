@@ -1,4 +1,4 @@
-//#region Basics Course
+//#region Basics CourseCourse
 
 //#region Basics - Writing messages
 
@@ -892,5 +892,86 @@ const lastItem = listContent.querySelector("li:last-child");
 lastItem.remove();
 
 //#endregion
+
+//#endregion
+
+//#region Interacting with the DOM
+
+//#region DOM - Functions as Parameters
+
+function SayHi()
+{
+    console.log("Hello");
+}
+
+function HiAndBye(func)
+{
+    func();
+    console.log("Hello");
+}
+
+HiAndBye(SayHi);
+
+HiAndBye(()=>
+{
+    console.log("This is an anonymous function");
+});
+
+//#endregion
+
+//#region DOM - The Event Object
+
+document.addEventListener("click", (event)=>{
+    console.log(event); //Returns info about the event
+    console.log(event.target); //Returns the element that triggered the event (could be a specific tag like <a> or <li>)
+})
+
+//#endregion
+
+//#region DOM - Event Bubbling and Delegation
+
+for (let item of listContent.getElementsByTagName("li"))
+{
+    item.addEventListener("mouseover", ()=>{
+        item.textContent = rawContent.toUpperCase();
+    })
+}
+
+//Instead of looping through all of the elements and adding listeners
+//you can listen to the parent 
+//This simplifies code, optimises memory and allows for dynamic elements to be included
+
+listContent.addEventListener("mouseover", (event)=>{
+    if (event.target.tagName === "LI")
+    {
+        event.target.textContent = event.target.textContent.toUpperCase();
+    }
+})
+
+//#endregion
+
+//#region DOM - Select Children and Parents
+
+function AttachRemoveButton(li)
+{
+    let removeBtn = document.createElement("button");
+    removeBtn.className = "remove";
+    removeBtn.textContent = "Remove";
+
+    li.appendChild(removeBtn);
+
+}
+
+listContent.children; //Gets all children of this element
+
+listContent.addEventListener("click", (event)=>{
+    if (event.target.tagName === "BUTTON")
+    {
+        const button = event.target;
+        const li = button.parentNode; //Gets Parent Node
+    }
+})
+
+//#endregion 
 
 //#endregion

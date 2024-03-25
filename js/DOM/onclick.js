@@ -20,11 +20,10 @@ function CreateTask()
             ToggleHideContent();
         }
 
-        listContent.insertAdjacentHTML
-        (
-            "afterbegin",
-            `<li>${input.value}</li>`
-        );
+        const li = document.createElement("li");
+        li.textContent = input.value;
+        AttachRemoveButton(li);
+        listContent.prepend(li);
     
         input.value = "";
     }
@@ -32,20 +31,24 @@ function CreateTask()
 
 //Remove Task Button
 
-var removeBtn = document.getElementById("btn-remove");
-removeBtn.addEventListener("click", RemoveTask);
-
-function RemoveTask()
+function AttachRemoveButton(li)
 {
-    if (!show)
-    {
-        ToggleHideContent();
-    }
+    let removeBtn = document.createElement("button");
+    removeBtn.className = "remove";
+    removeBtn.textContent = "Remove";
 
-    const lastItem = listContent.querySelector("li:last-child");
+    li.appendChild(removeBtn);
 
-    lastItem.remove();
 }
+
+listContent.addEventListener("click", (event)=>{
+    if (event.target.tagName === "BUTTON")
+    {
+        const button = event.target;
+        const li = button.parentNode;
+        li.remove();
+    }
+})
 
 //Hide Button
 
@@ -60,3 +63,12 @@ function ToggleHideContent()
     content.style.display = show ? "inline" : "none";
     hideBtn.textContent = show ? "Hide" : "Show";
 }
+
+//Hover on List Items
+
+listContent.addEventListener("mouseover", (event)=>{
+    if (event.target.tagName === "LI")
+    {
+        event.target.style.backgroundColor = "red";
+    }
+})

@@ -58,10 +58,10 @@ nav
 
     @media #{$brk-narrow}
     {
-        &.navbar
-        {
-            position: sticky;
-        }
+        // &.navbar
+        // {
+        //     position: sticky;
+        // }
 
         &.navbar .button
         {
@@ -78,4 +78,11 @@ nav
             font-style: normal;
         }
     }
+}
+
+.nav-red,
+.is-sticky nav
+{
+    transition: 1s;
+    background-color: red !important;
 }

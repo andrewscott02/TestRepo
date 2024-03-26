@@ -3,120 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="js/_plugins/slick/slick.css">
+    <link rel="stylesheet" href="js/_plugins/slick/slick-theme.css">
     <link rel="stylesheet" href="css/application.css">
     <title>My Games</title>
 </head>
 <body>
-    <header id="top">
-        <div class = "icon">
-            <img src="https://andrewscott02.github.io/Images/Banner%20Character.jpg">
-        </div>
-        <h1>Andrew Scott</h1>
-    </header>
+    <div class="animsition">
 
-    <nav class="navbar">
-        <ul class="flexContainer">
-            <li class="item button current"><a href="index.html">Home</a></li>
-            <li class="item button"><a href="games.html">Games</a></li>
-            <li class="item button"><a href="#">Projects</a></li>
-            <li class="item button" id="socialnavbuttonstart"><a href="about.html">About</a></li>
-
-            <div class="item flexContainer rightAligned">
-                <li class="item button social"><a href="#">LinkedIn</a></li>
-                <li class="item button social"><a href="#">Itch</a></li>
+        <header id="top">
+            <div class = "icon">
+                <img src="https://andrewscott02.github.io/Images/Banner%20Character.jpg">
             </div>
-        </ul>
-    </nav>
+            <h1>Andrew Scott</h1>
+        </header>
 
-    <!-- Main hero image container, includes background image -->
-    <section id = "HeroImage">
-        <!-- Hero image elements -->
-        <div class="heroElements">
-            <h1 class = "heroTitle">
-                Andrew Scott
-            </h1>
+        <nav class="navbar">
+            <ul class="flexContainer">
+                <div class="animsition-container">
+                    <li class="item button current"><a href="index.html">Home</a></li>
+                    <li class="item button"><a href="games.html">Games</a></li>
+                    <li class="item button"><a href="#">Projects</a></li>
+                    <li class="item button" id="socialnavbuttonstart"><a href="about.html">About</a></li>
+                </div>
+                <div class="item flexContainer rightAligned">
+                    <li class="item button social"><a href="#">LinkedIn</a></li>
+                    <li class="item button social"><a href="#">Itch</a></li>
+                </div>
+            </ul>
+        </nav>
 
-            <p class = "heroText">
-                Games Programmer
+        <!-- Main hero image container, includes background image -->
+        <section id = "HeroImage">
+            <!-- Hero image elements -->
+            <div class="heroElements">
+                <h1 class = "heroTitle">
+                    Andrew Scott
+                </h1>
+
+                <p class = "heroText">
+                    Games Programmer
+                </p>
+
+                <a href="about.html" class="button">About Me</a>
+            </div>
+        </section>
+
+        <main>
+            <section id = "Showreel">
+                <h2>Showreel</h2>
+                <div align = "center">
+                    <iframe width = "560" height = "315" src="https://www.youtube.com/embed/bBJG4Cf6Yg8?si=IIOVcIAw24Y9OFXB" title="YouTube  video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </section>
+
+            <section id = "Games">
+                <h2>Featured Projects</h2>
+                <div class="ProjectCollection">
+                    <div class="slides">
+                        <div class="ProjectOverview">
+                            <h3 class="enfabler">Enfabler</h3>
+                            <figure id = "Screenshots">
+                                <iframe width = "560" height = "315" src="https://www.youtube.com/embed/-6_DhxBhzdw?si=B92WzvfwEEUuz4LB" title="YouTube  video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                <!-- <figcaption><em>Enfabler</em> is a procedurally generated dungeon crawler.</figcaption> -->
+                            </figure>
+                            <p class="button center"><a href="Games/enfabler.html">View Game Page</a></p>
+                        </div>
+
+                        <div class="ProjectOverview">
+                            <h3 class="coa">Corruption of Arcana</h3>
+                            <figure id = "Screenshots">
+                                <iframe width = "560" height = "315" src="https://www.youtube.com/embed/r8M4nrsPlGo?si=7DKvqGvw6CWM9_Yy" title="YouTube  video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                <!-- <figcaption><em>Corruption of Arcana</em> is a turn-based card game.</figcaption> -->
+                            </figure>
+                            <p class="button center"><a href="#">View Game Page</a></p>
+                        </div>
+
+                        <div class="ProjectOverview">
+                            <h3 class="creak">Creak</h3>
+                            <figure id = "Screenshots">
+                                <img src="https://img.itch.zone/aW1nLzE0MjcwODQzLnBuZw==/315x250%23c/tEd6jy.png" alt="Enfabler Game Screenshot"/>
+                                <!-- <figcaption><em>Enfabler</em> is a procedurally generated dungeon crawler.</figcaption> -->
+                            </figure>
+                            <p class="button center"><a href="#">View Game Page</a></p>
+                        </div>
+
+                        <div class="ProjectOverview">
+                            <h3>TTRPG Controller</h3>
+                            <figure id = "Screenshots">
+                                <iframe width = "560" height = "315" src="https://www.youtube.com/embed/TVrhjMUS844?si=dnmwZHIdKx-2eYxX" title="YouTube  video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                <!-- <figcaption><em>Enfabler</em> is a procedurally generated dungeon crawler.</figcaption> -->
+                            </figure>
+                            <p class="button center"><a href="#">View Project Details Page</a></p>
+                        </div>
+
+                        <div class="ProjectOverview">
+                            <h3>TTRPG Combat</h3>
+                            <figure id = "Screenshots">
+                                <iframe width = "560" height = "315" src="https://www.youtube.com/embed/lg1MPgQ8eVY?si=67sKKbEN5KVo2_GK" title="YouTube  video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                <!-- <figcaption><em>Enfabler</em> is a procedurally generated dungeon crawler.</figcaption> -->
+                            </figure>
+                            <p class="button center"><a href="#">View Project Details Page</a></p>
+                        </div>
+
+                        <div class="ProjectOverview">
+                            <h3>VFX Programming</h3>
+                            <figure id = "Screenshots">
+                                <img src="Images/GraphicsImages.png">
+                                <!-- <figcaption><em>Enfabler</em> is a procedurally generated dungeon crawler.</figcaption> -->
+                            </figure>
+                            <p class="button center"><a href="#">View Project Details Page</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ProjectCollection flexContainer">
+                    <div class="ProjectOverview">
+                        <h3 class="enfabler">Enfabler</h3>
+                        <figure id = "Screenshots">
+                            <iframe width = "560" height = "315" src="https://www.youtube.com/embed/-6_DhxBhzdw?si=B92WzvfwEEUuz4LB" title="YouTube  video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <!-- <figcaption><em>Enfabler</em> is a procedurally generated dungeon crawler.</figcaption> -->
+                        </figure>
+                        <p class="button center"><a href="Games/enfabler.html">View Game Page</a></p>
+                    </div>
+
+                    <div class="ProjectOverview">
+                        <h3 class="coa">Corruption of Arcana</h3>
+                        <figure id = "Screenshots">
+                            <iframe width = "560" height = "315" src="https://www.youtube.com/embed/r8M4nrsPlGo?si=7DKvqGvw6CWM9_Yy" title="YouTube  video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <!-- <figcaption><em>Corruption of Arcana</em> is a turn-based card game.</figcaption> -->
+                        </figure>
+                        <p class="button center"><a href="#">View Game Page</a></p>
+                    </div>
+
+                    <div class="ProjectOverview">
+                        <h3 class="creak">Creak</h3>
+                        <figure id = "Screenshots">
+                            <img src="https://img.itch.zone/aW1nLzE0MjcwODQzLnBuZw==/315x250%23c/tEd6jy.png" alt="Enfabler Game Screenshot"/>
+                            <!-- <figcaption><em>Enfabler</em> is a procedurally generated dungeon crawler.</figcaption> -->
+                        </figure>
+                        <p class="button center"><a href="#">View Game Page</a></p>
+                    </div>
+
+                    <div class="ProjectOverview">
+                        <h3>TTRPG Controller</h3>
+                        <figure id = "Screenshots">
+                            <iframe width = "560" height = "315" src="https://www.youtube.com/embed/TVrhjMUS844?si=dnmwZHIdKx-2eYxX" title="YouTube  video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <!-- <figcaption><em>Enfabler</em> is a procedurally generated dungeon crawler.</figcaption> -->
+                        </figure>
+                        <p class="button center"><a href="#">View Project Details Page</a></p>
+                    </div>
+
+                    <div class="ProjectOverview">
+                        <h3>TTRPG Combat</h3>
+                        <figure id = "Screenshots">
+                            <iframe width = "560" height = "315" src="https://www.youtube.com/embed/lg1MPgQ8eVY?si=67sKKbEN5KVo2_GK" title="YouTube  video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <!-- <figcaption><em>Enfabler</em> is a procedurally generated dungeon crawler.</figcaption> -->
+                        </figure>
+                        <p class="button center"><a href="#">View Project Details Page</a></p>
+                    </div>
+
+                    <div class="ProjectOverview">
+                        <h3>VFX Programming</h3>
+                        <figure id = "Screenshots">
+                            <img src="Images/GraphicsImages.png">
+                            <!-- <figcaption><em>Enfabler</em> is a procedurally generated dungeon crawler.</figcaption> -->
+                        </figure>
+                        <p class="button center"><a href="#">View Project Details Page</a></p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer>
+            <p>
+                <small>Made by Andrew Scott &copy;</small>
             </p>
+        </footer>
 
-            <a href="about.html" class="button">About Me</a>
-        </div>
-    </section>
+    </div>
 
-    <main>
-        <section id = "Showreel">
-            <h2>Showreel</h2>
-            <div align = "center">
-                <iframe width = "560" height = "315" src="https://www.youtube.com/embed/bBJG4Cf6Yg8?si=IIOVcIAw24Y9OFXB" title="YouTube  video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-        </section>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- <script src="js/jquery-1.11.2.min.js"></script> -->
+    <!-- <script src="js/animsition/animsition.min.js"></script> -->
+    <script src="js/_plugins/sticky/jquery.sticky.js"></script>
+    <script src="js/_plugins/slick/slick.min.js"></script>
+    <script src="js/_plugins/plugin.js"></script>
 
-        <section id = "Games">
-            <h2>Featured Projects</h2>
-            <div class="ProjectCollection flexContainer">
-                <div class="ProjectOverview">
-                    <h3 class="enfabler">Enfabler</h3>
-                    <figure id = "Screenshots">
-                        <iframe width = "560" height = "315" src="https://www.youtube.com/embed/-6_DhxBhzdw?si=B92WzvfwEEUuz4LB" title="YouTube  video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        <!-- <figcaption><em>Enfabler</em> is a procedurally generated dungeon crawler.</figcaption> -->
-                    </figure>
-                    <p class="button center"><a href="Games/enfabler.html">View Game Page</a></p>
-                </div>
-
-                <div class="ProjectOverview">
-                    <h3 class="coa">Corruption of Arcana</h3>
-                    <figure id = "Screenshots">
-                        <iframe width = "560" height = "315" src="https://www.youtube.com/embed/r8M4nrsPlGo?si=7DKvqGvw6CWM9_Yy" title="YouTube  video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        <!-- <figcaption><em>Corruption of Arcana</em> is a turn-based card game.</figcaption> -->
-                    </figure>
-                    <p class="button center"><a href="#">View Game Page</a></p>
-                </div>
-
-                <div class="ProjectOverview">
-                    <h3 class="creak">Creak</h3>
-                    <figure id = "Screenshots">
-                        <img src="https://img.itch.zone/aW1nLzE0MjcwODQzLnBuZw==/315x250%23c/tEd6jy.png" alt="Enfabler Game Screenshot"/>
-                        <!-- <figcaption><em>Enfabler</em> is a procedurally generated dungeon crawler.</figcaption> -->
-                    </figure>
-                    <p class="button center"><a href="#">View Game Page</a></p>
-                </div>
-
-                <div class="ProjectOverview">
-                    <h3>TTRPG Controller</h3>
-                    <figure id = "Screenshots">
-                        <iframe width = "560" height = "315" src="https://www.youtube.com/embed/TVrhjMUS844?si=dnmwZHIdKx-2eYxX" title="YouTube  video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        <!-- <figcaption><em>Enfabler</em> is a procedurally generated dungeon crawler.</figcaption> -->
-                    </figure>
-                    <p class="button center"><a href="#">View Project Details Page</a></p>
-                </div>
-
-                <div class="ProjectOverview">
-                    <h3>TTRPG Combat</h3>
-                    <figure id = "Screenshots">
-                        <iframe width = "560" height = "315" src="https://www.youtube.com/embed/lg1MPgQ8eVY?si=67sKKbEN5KVo2_GK" title="YouTube  video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        <!-- <figcaption><em>Enfabler</em> is a procedurally generated dungeon crawler.</figcaption> -->
-                    </figure>
-                    <p class="button center"><a href="#">View Project Details Page</a></p>
-                </div>
-
-                <div class="ProjectOverview">
-                    <h3>VFX Programming</h3>
-                    <figure id = "Screenshots">
-                        <img src="Images/GraphicsImages.png">
-                        <!-- <figcaption><em>Enfabler</em> is a procedurally generated dungeon crawler.</figcaption> -->
-                    </figure>
-                    <p class="button center"><a href="#">View Project Details Page</a></p>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <footer>
-        <p>
-            <small>Made by Andrew Scott &copy;</small>
-        </p>
-    </footer>
 </body>
 </html>

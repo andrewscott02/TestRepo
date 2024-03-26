@@ -265,7 +265,7 @@ header h1 {
 }
 
 #Screenshots img {
-  width: 500px;
+  max-width: 500px;
   height: auto;
   border: 0px;
   padding: 0px;
@@ -347,7 +347,7 @@ header h1 {
 /* Navbar Elements */
 /* ========================================================== */
 nav {
-  z-index: 1;
+  z-index: 1000;
   margin-bottom: 20px;
   /* Combinator: Use + to get immediate siblings of type
                   Use ~ to select all siblings of type
@@ -399,6 +399,7 @@ nav.navbar li {
 
 .nav-red,
 .is-sticky nav {
+  z-index: 1000 !important;
   transition: 1s;
   background-color: red !important;
 }
@@ -422,6 +423,20 @@ nav.navbar li {
 
 .ProjectOverview h3 {
   margin-bottom: 0;
+}
+
+.slick-dots {
+  bottom: 10px;
+}
+
+.slick-dots li button:before {
+  color: rgb(146, 146, 146);
+  font-size: 14px;
+}
+
+.slick-dots li.slick-active button:before {
+  color: white;
+  font-size: 14px;
 }
 
 /* ========================================================== */

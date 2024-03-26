@@ -4,7 +4,7 @@
 
 nav
 {
-    z-index: 1;
+    z-index: 1000;
     margin-bottom: 20px;
 
     &.navbar
@@ -83,6 +83,7 @@ nav
 .nav-red,
 .is-sticky nav
 {
+    z-index: 1000 !important;
     transition: 1s;
     background-color: red !important;
 }

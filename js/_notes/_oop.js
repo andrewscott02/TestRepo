@@ -92,4 +92,3 @@ const slowEnemy = new Character(0, 0, 25, 0.5);
 
 //#endregion
 
-//#endregion

@@ -13,7 +13,7 @@
 
         <header id="top">
             <div class = "icon">
-                <img src="https://andrewscott02.github.io/Images/Banner%20Character.jpg">
+                <img src="Images/Banner Character.jpg">
             </div>
             <h1>Andrew Scott</h1>
         </header>
@@ -21,7 +21,7 @@
         <nav class="navbar">
             <ul class="flexContainer">
                 <div class="animsition-container">
-                    <li class="item button current"><a href="index.html">Home</a></li>
+                    <li class="item button current"><a href="index.php">Home</a></li>
                     <li class="item button"><a href="games.html">Games</a></li>
                     <li class="item button"><a href="#">Projects</a></li>
                     <li class="item button" id="socialnavbuttonstart"><a href="about.html">About</a></li>
@@ -176,11 +176,23 @@
 
         </main>
 
-        <footer>
+        <footer class="footer">
+            <p>
+                <small>
+                    &copy; <?php
+                    echo date("Y");
+                    echo " by Andrew Scott. ";
+                    echo "Last Modified: " . date("F d Y H:i:s", getlastmod());
+                    ?>
+                </small>
+            </p>
+        </footer>
+
+        <!-- <footer>
             <p>
                 <small>Made by Andrew Scott &copy;</small>
             </p>
-        </footer>
+        </footer> -->
 
     </div>
 

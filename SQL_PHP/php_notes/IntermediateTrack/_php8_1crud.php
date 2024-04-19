@@ -235,7 +235,7 @@
     }
 ?>
 
-<!-- Fefactor: Populate Project Dropdown to Remember Form Data -->
+<!-- Refactor: Populate Project Dropdown to Remember Form Data -->
 <select name="project_id" id="project_id">
     <option value="">Select One</option>
         <?php
@@ -257,15 +257,79 @@
 </select>
 
 <!-- Remembering Form Data -->
-<tr>
-    <th><label for="title">Title<span class="required">*</span></label></th>
-    <td><input type="text" id="title" name="title" value="<?php echo htmlspecialchars($title); ?>" /></td>
-</tr>
-<tr>
-    <th><label for="date">Date<span class="required">*</span></label></th>
-    <td><input type="text" id="date" name="date" value="<?php echo htmlspecialchars($date); ?>" placeholder="mm/dd/yyyy" /></td>
-</tr>
-<tr>
-    <th><label for="time">Time<span class="required">*</span></label></th>
-    <td><input type="text" id="time" name="time" value="<?php echo htmlspecialchars($time); ?>" /> minutes</td>
-</tr>
+<div>
+    <tr>
+        <th><label for="title">Title<span class="required">*</span></label></th>
+        <td><input type="text" id="title" name="title" value="<?php echo htmlspecialchars($title); ?>" /></td>
+    </tr>
+    <tr>
+        <th><label for="date">Date<span class="required">*</span></label></th>
+        <td><input type="text" id="date" name="date" value="<?php echo htmlspecialchars($date); ?>" placeholder="mm/dd/yyyy" /></td>
+    </tr>
+    <tr>
+        <th><label for="time">Time<span class="required">*</span></label></th>
+        <td><input type="text" id="time" name="time" value="<?php echo htmlspecialchars($time); ?>" /> minutes</td>
+    </tr>
+</div>
+
+<!-- Refactor: Validating Dates -->
+<?php
+    //Function to Check Date is in Correct Format
+    function ValidDate($dateMatch)
+    {
+        if (count($dateMatch) != 3)
+        {
+            return false;
+        }
+
+        if (strlen($dateMatch[0]) != 2
+            || strlen($dateMatch[1]) != 2
+            || strlen($dateMatch[2]) != 4)
+        {
+            return false;
+        }
+
+        if (!checkdate($dateMatch[0], $dateMatch[1], $dateMatch[2]))
+        {
+            return false;
+        }
+
+        return true;
+    }
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST")
+    {
+        //Setup empty data in case it does not get set by post
+        $project_id = $title = $date = $time = "";
+
+        //Filter and trim inputs
+        $project_id = trim(filter_input(INPUT_POST, "project_id", FILTER_SANITIZE_NUMBER_INT));
+        $title = trim(filter_input(INPUT_POST, "title", FILTER_SANITIZE_STRING));
+        $date = trim(filter_input(INPUT_POST, "date", FILTER_SANITIZE_STRING));
+        $time = trim(filter_input(INPUT_POST, "time", FILTER_SANITIZE_NUMBER_INT));
+        
+        //Validating Date
+        $dateMatch = explode("/", $date);
+
+        if (empty($project_id) || empty($title) || empty($date) || empty($time))
+        {
+            $error_message = "Please fill in the required fields: Project ID, Title, Date, Time";
+        }
+        else if (!ValidDate($dateMatch)) //Validate Dates
+        {
+            $error_message = "Invalid Date";
+        }
+        else
+        {
+            if (add_task($project_id, $title, $date, $time))
+            {
+                header("Location: task_list.php");
+                exit;
+            }
+            else
+            {
+                $error_message = "Could not add task";
+            }
+        }
+    }
+?>

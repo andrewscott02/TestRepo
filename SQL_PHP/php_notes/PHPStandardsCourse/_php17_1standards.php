@@ -67,3 +67,26 @@ pdo - https://www.php.net/pdo
 ?>
 
 <!-- Understanding UTF-8 -->
+<?php
+    //Get info on installed modules in browser - Check mbstring is listed and enabled
+    // phpinfo();
+    // exit;
+
+    //UTF-8 preserves special characters, like accents
+    //mbstring preserves functionality of string functions with accented characters
+
+    mb_internal_encoding("UTF-8");
+    mb_http_output("UTF-8");
+
+    $string = "String is converted to utf-8 characters - é";
+
+    header("Contend-Type: text/html: charset=utf-8");
+
+    echo strtoupper($string) . "\n"; //Will not properly convert accented characters in upper case
+    echo mb_strtoupper($string) . "\n"; //Properly converts strings as upper case
+
+    echo strlen($string) . "\n";
+    echo mb_strlen($string) . "\n";
+
+    //mbstring replaces more string functions, just use mb_ in front
+?>
